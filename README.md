@@ -45,3 +45,10 @@ app.listen(port, () => {
     "dev": "nodemon server.js" // agrego script
 }
 ```
+
+## restore del dump llocal en la base remota
+```sh
+mongorestore --uri "mongodb+srv://cluster0.hlllp.mongodb.net/" --username makuserrano --nsInclude integrador_etapa_4.* dump
+
+mongoexport "mongodb+srv://cluster0.hlllp.mongodb.net/" --username makuserrano --db bc_bootcamp
+```
