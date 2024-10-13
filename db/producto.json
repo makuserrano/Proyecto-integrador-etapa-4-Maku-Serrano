@@ -1,6 +1,82 @@
-{"_id":{"$oid":"653b0221c1bfb6ecef75a87f"},"nombre":"Auriculares Sony","foto":"img/auriculares-sony.jpg","detalles":"Saepe enim ipsa facilis velit quidem voluptatibus totam dicta","precio":985,"stock":4,"marca":"Sleek Cotton Chips","categoria":"Refined","id":3,"envio":true}
-{"_id":{"$oid":"653b0221c1bfb6ecef75a87d"},"nombre":"IPhone 11 Pro Max","foto":"img/apple-iphone-11-pro-max.jpg","detalles":"Lorem ipsum dolor sit, amet consectetur adipisicing.","precio":250.5,"stock":"4","marca":"Apple","categoria":"celulares","id":1,"envio":false}
-{"_id":{"$oid":"654043449bcc2cb0c42d9248"},"nombre":"Maximiliano","precio":1200,"stock":1,"marca":"Sorny","categoria":"Electro","detalles":"Detaller super","foto":"img/celular-samsung.jpg","envio":true,"__v":0}
-{"_id":{"$oid":"653b0221c1bfb6ecef75a880"},"nombre":"Camara Nikon","detalles":"Lorem ipsum dolor sit amet consectetur, adipisicing elit.","foto":"img/camara-canon.jpg","precio":678,"stock":7,"marca":"Rustic Soft Tuna","categoria":"Generic","id":4,"envio":true}
-{"_id":{"$oid":"653b0221c1bfb6ecef75a87e"},"nombre":"IPhone 12","foto":"img/apple-iphone-12.jpg","detalles":"Quasi cupiditate quisquam facere molestiae","precio":240.3,"stock":"4","marca":"Apple","categoria":"celulares","id":2,"envio":true}
-{"_id":{"$oid":"653b0221c1bfb6ecef75a881"},"nombre":"S50","detalles":"Detaller super","foto":"img/celular-samsung.jpg","precio":1200,"stock":1,"marca":"Samsunggggggg","categoria":"celu","id":5,"envio":true}
+[
+    {
+        "nombre": "Opti lube",
+        "foto": "img/products/producto1.png",
+        "detalles": "Preserve es un antioxidante.",
+        "precio": 2300,
+        "stock": 4,
+        "marca": "OPTILUBE",
+        "categoria": "ANTIOXIDANTE",
+        "envio": true
+    },
+    {
+        "nombre": "Filtros Wega",
+        "foto": "img/products/producto2.png",
+        "detalles": "Toyota Hilux 2.8td",
+        "precio": 5000,
+        "stock": 15,
+        "marca": "WEGA",
+        "categoria": "FILTRO",
+        "envio": true
+    },
+    {
+        "nombre": "STP OIL",
+        "foto": "img/products/producto6.png",
+        "detalles": "Tratamiento para aceite.",
+        "precio": 8900,
+        "stock": 11,
+        "marca": "STP",
+        "categoria": "ACEITE",
+        "envio": true
+    },
+    {
+        "nombre": "YPF GRASA",
+        "foto": "img/products/producto3.png",
+        "detalles": "Lubricante que soporte grandes cargas",
+        "precio": 124,
+        "stock": 7,
+        "marca": "YPF",
+        "categoria": "ACEITE",
+        "envio": true
+    },
+    {
+        "nombre": "kit aceite mobil1",
+        "foto": "img/products/producto4.png",
+        "detalles": "Protección superior.",
+        "precio": 124,
+        "stock": 1,
+        "marca": "MOBIL1",
+        "categoria": "ACEITE",
+        "envio": true
+    },
+    {
+        "nombre": "Barril aceite shell",
+        "foto": "img/products/producto5.png",
+        "detalles": "Rendimiento y protección superior para tu motor.",
+        "precio": 124,
+        "stock": 1,
+        "marca": "SHELL",
+        "categoria": "ACEITE",
+        "envio": true
+    },
+    {
+        "nombre": "Jack oil stop leak",
+        "foto": "img/products/producto7.png",
+        "detalles": "Stop leak para prevenir y reparar fugas.",
+        "precio": 124,
+        "stock": 1,
+        "marca": "JACKOIL",
+        "categoria": "WINZ",
+        "envio": true
+    },
+    {
+        "nombre": "Star Racing Agua Desmineralizada",
+        "foto": "img/products/producto8.png",
+        "detalles": "Agua destilada para radiador.",
+        "precio": 124,
+        "stock": 1,
+        "marca": "STARRACING",
+        "categoria": "AGUADESTILADA",
+        "envio": true
+    }
+]
