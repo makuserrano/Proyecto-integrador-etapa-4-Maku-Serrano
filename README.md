@@ -61,3 +61,5 @@ npm i cors
 import cors from 'cors'
 ~agregamos el middleware
 app.use(cors()); // corrije error cors(cualquier puede abrirlo)```
+
+prueba
