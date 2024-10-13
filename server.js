@@ -1,8 +1,10 @@
 import express from "express";
+import cors from 'cors'
 
 import "dotenv/config";
 import routerProductos from "./routers/productos.router.js";
 import getConnection from "./utils/get-connection.js";
+import routerCarritos from './routers/carrito.router.js'
 
 // VARIABLES
 const app = express();
@@ -11,13 +13,15 @@ const uri_remota = process.env.URI_MONGO;
 
 // MIDDLEWARES
 app.use(express.json()); //interpreta el body, si no me sale undefined
-
+app.use(cors()); // corrije error cors(cualquier puede abrirlo)
+//ahora funciona
 
 // RUTAS
 app.use("/api/v1/productos", routerProductos);
+app.use('/api/v1/carritos', routerCarritos)
 
 app.get("/", (req, res) => {
-  res.send("hola soy el back"); // http://localhost:8080 ahi me aparece.
+  res.redirect('/api/v1/productos'); // http://localhost:8080 ahi me aparece.
 });
 
 app.all("*", (req, res) => {

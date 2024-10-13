@@ -52,3 +52,12 @@ mongorestore --uri "mongodb+srv://cluster0.hlllp.mongodb.net/" --username makuse
 
 mongoexport "mongodb+srv://cluster0.hlllp.mongodb.net/" --username makuserrano --db bc_bootcamp
 ```
+
+
+## instalar cors (problema seguridad.)
+```sh
+npm i cors
+~ agg en server.js
+import cors from 'cors'
+~agregamos el middleware
+app.use(cors()); // corrije error cors(cualquier puede abrirlo)```

@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import ProductosEsquema from "./ProductosEsquema.js";
+import ProductosEsquema from "./esquemas/ProductosEsquema.js";
 
 //! Modelo Mongoose creado.
 
@@ -21,7 +21,7 @@ const obtenerUnProducto = async (id) => {
     console.log(producto)
     return producto
    } catch (err) {
-    console.log('[ProductosModelo]',err )
+    console.log('[obtenerUnProducto]',err )
    }
  };
 const crearProducto = async (producto) => {
@@ -32,11 +32,21 @@ const crearProducto = async (producto) => {
     const productoCreado = await ProductosModelo.create(producto)
     return productoCreado
   } catch (err) {
-    console.log('[crearProducto]',err)
+    throw err
   }
 
 };
-const updateProductos = () => {};
+const updateProductos = async (id, productoEditado) => {
+
+    try {
+      const options = {new:true}
+     const productoYaEditado = await ProductosModelo.findByIdAndUpdate(id, productoEditado, options) 
+     console.log('[updateProducto]',productoYaEditado) 
+     return productoYaEditado
+    } catch (err) {
+      throw err
+    }
+};
 const deleteProducto = async (id) => {
   try {
   
@@ -51,5 +61,5 @@ export default {
   obtenerUnProducto,
   crearProducto,
   updateProductos,
-  deleteProducto,
+  deleteProducto
 };

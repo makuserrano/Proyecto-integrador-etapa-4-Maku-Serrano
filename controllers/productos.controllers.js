@@ -1,9 +1,10 @@
-import modelos from '../models/productos.models.js'
+import modelos from "../models/productos.models.js";
+import handleMongoId from "../utils/handle-mongo-id.js";
 
 const getAll = async (req, res) => {
   try {
     const productos = await modelos.obtenerTodos();
-    res.json({ productos })
+    res.json(handleMongoId(productos));
   } catch (err) {
     console.log("[getAll]", err);
   }
@@ -14,7 +15,7 @@ const getOne = async (req, res) => {
 
   try {
     const producto = await modelos.obtenerUnProducto(id);
-    res.send(`Ok -> GET ONE ID: ${id}`);
+    res.json(handleMongoId(producto)); //paso la funcion para quitarle el _id, asi lo conecto sin problemas
   } catch (err) {
     console.log("[getOne]", err);
   }
@@ -25,9 +26,7 @@ const create = async (req, res) => {
   // console.log(producto)
   try {
     const productoCreado = await modelos.crearProducto(producto);
-    res.status(201).json({
-      producto: productoCreado
-    });
+    res.status(201).json(handleMongoId(productoCreado));
   } catch (err) {
     console.log("[create]", err);
   }
@@ -41,7 +40,7 @@ const update = async (req, res) => {
       id,
       productoEditado
     );
-    res.send(`producto editado ${productoActualizado}`);
+    res.json(handleMongoId(productoActualizado));
   } catch (err) {
     console.log("[update]", err);
   }
@@ -51,7 +50,7 @@ const remove = async (req, res) => {
   try {
     const productoBorrado = await modelos.deleteProducto(id);
     // console.log(productoBorrado)
-    res.json({producto:productoBorrado});
+    res.json(handleMongoId(productoBorrado));
   } catch (err) {
     console.log("[remove]", err);
   }
